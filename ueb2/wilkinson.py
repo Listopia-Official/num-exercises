@@ -3,7 +3,7 @@ This is the solution of Florian Haas (3382958) and Pascal Bauer (3383821) for
 the fourth exercise (first programming exercise) on the second worksheet of Numerik I.
 
 This program computes the Wilkinson Matrix for every dimension n in the range of 0 and the maximum specified one,
-and solves the specified linear equation system with the right side defines as in the exercise description.
+and solves the specified linear equation system with the right side defined as in the exercise description.
 
 Then the absolute error between the computed and expected solution vector is computed, it'll be compared with three
 pre-defined error values, and the first dimension when the error exceeds a certain of one of those three thresholds
