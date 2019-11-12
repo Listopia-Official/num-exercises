@@ -42,7 +42,7 @@ def linearRegression(pairs):
 
 # Creates the regression and displays it in comparison to the data points
 def plotSolution(pairs):
-    solution = linearRegression(pairs)
+    solution = linearRegression(pairs) # our (a_1, a_0) solution
     
     print("Solution for the pairs", pairs, ": p(x) = ",solution[1][0],"*x + ",solution[0][0])
     
@@ -50,11 +50,11 @@ def plotSolution(pairs):
     maxX = max([pairs[i][0] for i in range(len(pairs))])
     
     for pair in pairs:
-        plot.scatter(pair[0], pair[1])
+        plot.scatter(pair[0], pair[1]) # Plot the points
         
-    x = np.linspace(minX, maxX, 1000)
+    x = np.linspace(minX, maxX, 1000) # x-Axis
         
-    plot.plot(x, [solution[1][0]*x_comp + solution[0][0] for x_comp in x])
+    plot.plot(x, [solution[1][0]*x_comp + solution[0][0] for x_comp in x]) # Display the regression
     plot.show()
     
   
