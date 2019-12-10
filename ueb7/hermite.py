@@ -114,10 +114,10 @@ def plotSolution(points, base, coefficients):
     minX = min([points[i][0] for i in range(len(points))]) # Compute plot area from points
     maxX = max([points[i][0] for i in range(len(points))])
     
-    knownPoints = set()
+    knownPoints = set()# Don't plot the specified values for the deriatives, so we store the points
     
     for point in points:
-        if point[0] not in knownPoints:
+        if point[0] not in knownPoints: # Only plot f(x_i) (see above)
             knownPoints.add(point[0])
             plt.scatter(point[0], point[1]) # Plot the points
         
@@ -131,8 +131,8 @@ def plotSolution(points, base, coefficients):
     plt.plot(x, [polynome(x_comp) for x_comp in x]) # Display the interpolation polynome
     plt.show()
     
-# a): Changed newtonCoefficients and diffSlightly
-# b): No changes needed
+# a): Changed newtonCoefficients and diff slightly
+# b): No changes needed - newtonBase works fine
 # c): See below, you can change the points
     
 points = [(0,5/4), (0,0), (1, 1), (1, -3/4), (2, 1/8), (2, -5/8)] # Interpolation constraints from 7.1
